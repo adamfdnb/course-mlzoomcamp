@@ -1,6 +1,6 @@
 (venv-sdb) c:\Users\adamf\Documents\Programing\zoomcamp\07-bentoml-production\stable-diffusion-benttoml\bentoctl>bentoctl build -b stable_diffusion_fp16:latest -f deployment_config.yaml
 Traceback (most recent call last):
-  File "C:\ProgramData\Anaconda3\lib\runpy.py", line 197, in _run_module_as_main
+File "C:\ProgramData\Anaconda3\lib\runpy.py", line 197, in _run_module_as_main
     return _run_code(code, main_globals, None,
   File "C:\ProgramData\Anaconda3\lib\runpy.py", line 87, in _run_code
     exec(code, run_globals)
