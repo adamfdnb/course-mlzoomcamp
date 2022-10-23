@@ -1,0 +1,59 @@
+(venv-sdb) c:\Users\adamf\Documents\Programing\zoomcamp\07-bentoml-production\stable-diffusion-benttoml\bentoctl>bentoctl build -b stable_diffusion_fp16:latest -f deployment_config.yaml
+Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "C:\ProgramData\Anaconda3\lib\runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "C:\Users\adamf\Documents\Programing\zoomcamp\07-bentoml-production\stable-diffusion-benttoml\venv-sdb\Scripts\bentoctl.exe\__main__.py", line 7, in <module>
+    sys.exit(bentoctl())
+  File "C:\Users\adamf\Documents\Programing\zoomcamp\07-bentoml-production\stable-diffusion-benttoml\venv-sdb\lib\site-packages\click\core.py", line 1130, in __call__
+    return self.main(*args, **kwargs)
+  File "C:\Users\adamf\Documents\Programing\zoomcamp\07-bentoml-production\stable-diffusion-benttoml\venv-sdb\lib\site-packages\click\core.py", line 1055, in main
+    rv = self.invoke(ctx)
+  File "C:\Users\adamf\Documents\Programing\zoomcamp\07-bentoml-production\stable-diffusion-benttoml\venv-sdb\lib\site-packages\click\core.py", line 1657, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "C:\Users\adamf\Documents\Programing\zoomcamp\07-bentoml-production\stable-diffusion-benttoml\venv-sdb\lib\site-packages\click\core.py", line 1404, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "C:\Users\adamf\Documents\Programing\zoomcamp\07-bentoml-production\stable-diffusion-benttoml\venv-sdb\lib\site-packages\click\core.py", line 760, in invoke
+    return __callback(*args, **kwargs)
+  File "C:\Users\adamf\Documents\Programing\zoomcamp\07-bentoml-production\stable-diffusion-benttoml\venv-sdb\lib\site-packages\bentoctl\cli\utils.py", line 90, in wrapper
+    return_value = func(*args, **kwargs)
+  File "C:\Users\adamf\Documents\Programing\zoomcamp\07-bentoml-production\stable-diffusion-benttoml\venv-sdb\lib\site-packages\bentoctl\cli\utils.py", line 55, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\adamf\Documents\Programing\zoomcamp\07-bentoml-production\stable-diffusion-benttoml\venv-sdb\lib\site-packages\bentoctl\cli\utils.py", line 24, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\adamf\Documents\Programing\zoomcamp\07-bentoml-production\stable-diffusion-benttoml\venv-sdb\lib\site-packages\bentoctl\cli\__init__.py", line 158, in build
+    ) = deployment_config.create_repository()
+  File "C:\Users\adamf\Documents\Programing\zoomcamp\07-bentoml-production\stable-diffusion-benttoml\venv-sdb\lib\site-packages\bentoctl\deployment_config.py", line 217, in create_repository
+    (repository_url, username, password,) = self.operator.create_repository(
+  File "C:\Users\adamf\Documents\Programing\zoomcamp\07-bentoml-production\stable-diffusion-benttoml\venv-sdb\lib\site-packages\bentoctl\operator\operator.py", line 150, in create_repository
+    return operator.create_repository(repository_name, operator_spec)
+  File "C:\Users\adamf\bentoctl\operators\aws-ec2\bentoctl_aws_ec2\registry_utils.py", line 44, in create_repository
+    repo_id, _ = create_ecr_repository_if_not_exists(
+  File "C:\Users\adamf\bentoctl\operators\aws-ec2\bentoctl_aws_ec2\registry_utils.py", line 30, in create_ecr_repository_if_not_exists
+    result = ecr_client.describe_repositories(repositoryNames=[repository_name])
+  File "C:\Users\adamf\Documents\Programing\zoomcamp\07-bentoml-production\stable-diffusion-benttoml\venv-sdb\lib\site-packages\botocore\client.py", line 514, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+  File "C:\Users\adamf\Documents\Programing\zoomcamp\07-bentoml-production\stable-diffusion-benttoml\venv-sdb\lib\site-packages\botocore\client.py", line 921, in _make_api_call
+    http, parsed_response = self._make_request(
+  File "C:\Users\adamf\Documents\Programing\zoomcamp\07-bentoml-production\stable-diffusion-benttoml\venv-sdb\lib\site-packages\botocore\client.py", line 944, in _make_request
+    return self._endpoint.make_request(operation_model, request_dict)
+  File "C:\Users\adamf\Documents\Programing\zoomcamp\07-bentoml-production\stable-diffusion-benttoml\venv-sdb\lib\site-packages\botocore\endpoint.py", line 119, in make_request
+    return self._send_request(request_dict, operation_model)
+  File "C:\Users\adamf\Documents\Programing\zoomcamp\07-bentoml-production\stable-diffusion-benttoml\venv-sdb\lib\site-packages\botocore\endpoint.py", line 198, in _send_request
+    request = self.create_request(request_dict, operation_model)
+  File "C:\Users\adamf\Documents\Programing\zoomcamp\07-bentoml-production\stable-diffusion-benttoml\venv-sdb\lib\site-packages\botocore\endpoint.py", line 134, in create_request
+    self._event_emitter.emit(
+  File "C:\Users\adamf\Documents\Programing\zoomcamp\07-bentoml-production\stable-diffusion-benttoml\venv-sdb\lib\site-packages\botocore\hooks.py", line 412, in emit
+    return self._emitter.emit(aliased_event_name, **kwargs)
+  File "C:\Users\adamf\Documents\Programing\zoomcamp\07-bentoml-production\stable-diffusion-benttoml\venv-sdb\lib\site-packages\botocore\hooks.py", line 256, in emit
+    return self._emit(event_name, kwargs)
+  File "C:\Users\adamf\Documents\Programing\zoomcamp\07-bentoml-production\stable-diffusion-benttoml\venv-sdb\lib\site-packages\botocore\hooks.py", line 239, in _emit
+    response = handler(**kwargs)
+  File "C:\Users\adamf\Documents\Programing\zoomcamp\07-bentoml-production\stable-diffusion-benttoml\venv-sdb\lib\site-packages\botocore\signers.py", line 105, in handler
+    return self.sign(operation_name, request)
+  File "C:\Users\adamf\Documents\Programing\zoomcamp\07-bentoml-production\stable-diffusion-benttoml\venv-sdb\lib\site-packages\botocore\signers.py", line 189, in sign
+    auth.add_auth(request)
+  File "C:\Users\adamf\Documents\Programing\zoomcamp\07-bentoml-production\stable-diffusion-benttoml\venv-sdb\lib\site-packages\botocore\auth.py", line 418, in add_auth
+    raise NoCredentialsError()
+botocore.exceptions.NoCredentialsError: Unable to locate credentials
