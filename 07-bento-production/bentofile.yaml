@@ -1,0 +1,13 @@
+service: "hw7q5_service.py:svc"
+labels:
+  owner: AdamFdnb
+  project: mlzc
+include:
+- "*.py"
+python:
+  packages:
+    - xgboost
+    - sklearn
+    - pydantic
+    - numpy
+    
